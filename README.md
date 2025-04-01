@@ -1,5 +1,5 @@
 Este é um projeto que elaborei para por em pratica meus conhecimentos em python.
-Eu utilizei como base de dados a Superstore Sales Dataset do Kaggle.
+Eu utilizei como base de dados um dataset encontrado no Kaggle.
 Link da fonte https://www.kaggle.com/datasets/vivek468/superstore-dataset-final
 
 ESTRUTURA DO REPOSITÓRIO
