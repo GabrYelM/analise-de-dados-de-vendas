@@ -18,7 +18,7 @@ df['Order Date'] = pd.to_datetime(df['Order Date'])
 
 vendas_por_categoria = df.groupby('Category')['Sales'].sum().sort_values(ascending=False)
 
-# Gráfico de barras
+# Gráfico de Vendas por categoria
 plt.figure(figsize=(10, 6))
 vendas_por_categoria.plot(kind='bar', color='skyblue')
 plt.title('Vendas por Categoria de Produto')
@@ -28,10 +28,10 @@ plt.xticks(rotation=45)
 plt.grid(axis='y', linestyle='--')
 plt.show()
 
-
 lucro_por_subcategoria = df.groupby('Sub-Category')['Profit'].sum().sort_values()
 
-# Gráfico horizontal
+
+# Gráfico de Lucro por subcategoria
 plt.figure(figsize=(12, 8))
 lucro_por_subcategoria.plot(kind='barh', color='#4CAF50')
 plt.title('Lucro por Subcategoria')
@@ -40,9 +40,9 @@ plt.ylabel('Subcategoria')
 plt.grid(axis='x', linestyle='--')
 plt.show()
 
-
 vendas_mensais = df.resample('M', on='Order Date')['Sales'].sum()
 
+# Gráfico de Vendas mensais
 plt.figure(figsize=(12, 6))
 vendas_mensais.plot(kind='line', marker='o', color='purple')
 plt.title('Vendas Mensais (2015-2018)')
@@ -51,9 +51,9 @@ plt.ylabel('Vendas (US$)')
 plt.grid(True)
 plt.show()
 
-
 vendas_por_estado = df.groupby('State')['Sales'].sum().sort_values(ascending=False)
 
+#Gráfico de Vendas por estado
 plt.figure(figsize=(14, 8))
 vendas_por_estado.plot(kind='bar', color='orange')
 plt.title('Vendas por Estado')
