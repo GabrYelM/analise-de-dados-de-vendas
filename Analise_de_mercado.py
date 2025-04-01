@@ -42,6 +42,7 @@ plt.show()
 
 vendas_mensais = df.resample('M', on='Order Date')['Sales'].sum()
 
+
 # Gráfico de Vendas mensais
 plt.figure(figsize=(12, 6))
 vendas_mensais.plot(kind='line', marker='o', color='purple')
@@ -52,6 +53,7 @@ plt.grid(True)
 plt.show()
 
 vendas_por_estado = df.groupby('State')['Sales'].sum().sort_values(ascending=False)
+
 
 #Gráfico de Vendas por estado
 plt.figure(figsize=(14, 8))
